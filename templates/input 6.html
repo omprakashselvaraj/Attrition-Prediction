@@ -1,0 +1,342 @@
+<html>
+    <head>
+
+        <title>
+            attrition prediction </title>
+            <link rel = "icon" href =" https://thumbs.dreamstime.com/b/attrition-transparent-icon-symbol-design-time-ma-managemnet-collection-130312771.jpg"
+        type = "image/x-icon">
+        <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=zKgNOL8bgOA7myMeB5LY0bsYw4lP5H5i_JM8iPk3TQc-cq-q91bX4Kw4wO-0rSNEF25IQO8FtEkH81imDbafiPkEtw5PZdu3fJqwRWVIUY068CfLIZX-s3wXLG3-GhMCuqYANqHkshy5ifxApBO6BRG0p0P_r5KZwFN2JVinUlAwnjty3BVFVK2rIJGKVjRGPTv287TL9THf-y4C9QF_U9bnzbTN6ETCPzdRoBfzJBq4KnunUbSbjeUxJvA1j-s9DPWakHZuxXzrOwVYNBqnGZ2cM8sCKZQrFhTTTQKCXAGSjvCpyWK0Sy3M0dY3SSDpkYF5cyUY2X5cwL-GixhbaUsU_HuzlzosdvZiYJuoFQhKHIIp8ie20pG5mtJDFCsOD27dqC1pPKSTs8rbGBERYl-s74mK-ddY5vNATq5kfINcCeiGQi3bqU_2EMVmvKElWGvIs4ZJLXU4eERnjtL0qDZoSH2U9Ia-rYZ7575XU7z9h35F90n3l5HOZmIk_78EE5uMdbBP0cTOwK56xeqUmgDUL6gnmEncZ8-5wx4xK7HxLjbSfNI0zBJKAEkxZ_7enQJoYpL7yiVOMjMtinzIIAj2__ndS9yfumBjZcbd9dHh360CPq7rDBpG8FrIa3TtOaLlFM4xbOkzTYnKP80Zne4PmXl9zhZtIfKLYG_bcATPVSGHzroUdvJLkbSJ6l0URZvnOcvX9Hx7uDm_ucUgNE5pFE0M8UI66e502FaYyYEH6qBwPecYmXO08Zfrv9HDXiLEsBMPNCYhXhWNzm1kL5oHJXuh6areski66GPGG3myjyzUFUbso2TjO3SYMSD9cecyKo3lh_237PX6LQp7hDLS-SzJpzxqHeW8Wt9Awjq_ZQkHMygu5mA4aY7x8wte3VoTzoIZqaqYC1pPp0RNMpywfQ76OgJTnlFcWmnoAd-nB1wWXb3ymnNcAUxqPeI_L17itRvNCvxfbOxq68n6IV5aL_6A2vXUAcfc6Grr9uzETA0s9mKjA3bqRTaJRgAcA7fZIWiDbAwc9Yqe7fs9Xaplnxqaslq2vwruV0jhfQ5PWhqdNJRgUEa1qYuaNzqZzba1lFEI-rWo5CrRMLKPyqUX7H1iaK6JU77CcJ3o6Y1cyK7ARbg2JWj3EUvPKe-mMVOuVuzcy4-3Cok1yBrw9_nZ0kRJ4-WoQqWz0eh3lWg2WuGgXJ54EDouQ5jGVWy3dhaoB0LDggnAHybnp3IwlQ" nonce="d053693220680930e128272282e30492" charset="UTF-8"></script><script
+            type ="text/javascript">
+        </script>
+        <style>
+        body {
+            margin: 0;
+            padding: 0;
+            
+            
+            
+              background-image: url('https://images.unsplash.com/photo-1557683304-673a23048d34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8OHx8fGVufDB8fHx8&w=1000&q=80');
+              background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative
+            }
+         select,input[type=text] {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(249, 249, 253);color: rgb(19, 18, 18);
+  background-color: rgb(246, 249, 252);
+
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input {width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(249, 249, 253);color: rgb(15, 15, 15);
+  background-color: rgb(252, 253, 253) ;
+
+  border-radius: 4px;
+  box-sizing: border-box;
+  }
+ input[type=submit] {
+  width: 40%;
+  background-color:#2935db;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #6062f0;
+}
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: rgb(247, 248, 248);
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #0e0d0d;
+  padding: 12px 20px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: rgb(239, 245, 252);
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+</style>
+        
+    </head>
+    <body>
+      <center>
+       <h1>ATTRITION PREDICTION </h1>
+     
+        <form action="/input", method="POST">
+      
+          
+           
+            <label for="uage"><b>ENTER THE AGE  </b> </label><br>
+            <input id ="uage" name="uage" placeholder="age" type="text"> <br>
+            
+            <label for="ugender"><b>ENTER THE GENDER   </b> </label><br><br><div class="custom-select" style="width:400px;">
+            <select name="ugender">
+                <option value=1>MALE</option>
+                <option value=2>FEMALE</option>
+                </select></div><br>
+
+            
+            <label for="udepartment"><b>ENTER THE DEPARTMENT   </b> </label><br><br>
+            <div class="custom-select" style="width:400px;">
+            <select name="udepartment">
+                <option value=3>SALES</option>
+                <option value=2>RESEARCH AND DEVELOPMENT</option>
+                <option value=1>HUMAN RESOURCES</option>
+                
+                
+              </select></div><br><br>
+              <label for="mstatus"><b>ENTER THE MARRIAGE STATUS</b> </label><br>
+              <div class="custom-select" style="width:400px;">
+            <select name="mstatus">
+                <option value=2>MARRIED</option>
+                <option value=1>UNMARRIED</option>
+                <option value=3>DIVORCE</option>
+                
+                
+              </select> </div><br><br></br>
+              <label for="ueducation"><b>ENTER THE EDUCATION LEVEL   </b> </label><br>
+              <div class="custom-select" style="width:400px;">
+            <select name="ueducation">
+                <option value=1>SSLC</option>
+                <option value=2>HSC</option>
+                <option value=3>UG</option>
+                <option value=4>PG</option>
+                <option value=5>DR</option>
+            </select></div><br><br>
+        
+        <label for="urole"><b>ENTER THE JOB ROLE   </b> </label><br>
+        <div class="custom-select" style="width:500px;">
+      <select name="urole">
+          <option value=1>Sales Executive</option>
+          <option value=2>Research Scientist</option>
+          <option value=3>Laboratory Technician</option>
+          <option value=4>Manufacturing Director</option>
+          <option value=5>Healthcare Representative</option>
+          <option value=6>Manager</option>
+          <option value=7>Sales Representative</option>
+          <option value=8>Research Director</option> 
+          <option value=9>Human Resources</option>         
+      </select></div><br><br>
+      <label for="ujlevel"><b> JOB LEVEL  </b> </label><br>
+      <div class="custom-select" style="width:400px;">
+            <select name="ujlevel">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                         
+            </select></div><br><br>
+
+            
+            <label for="udistance"><b>ENTER THE DISTANCE </b> </label><br>
+            <input id ="udistance" name="udistance" placeholder="distance" type="number"/> <br><br>
+            <label for="uwork"><b>ENTER THE TOTAL WORKING YEARS </b> </label><br>
+            <input id ="uwork" name="uwork" placeholder="total working years " type="number"/> <br><br>
+            <label for="unwork"><b>ENTER THE NUMBER OF COMPANIES WORKED </b> </label><br>
+            <input id ="unwork" name="unwork" placeholder="number of companies worked  "type="number"/> <br><br>
+         
+          
+           
+            <label for="ucompany"><b>ENTER THE YEARS AT THIS COMPANY  </b> </label><br>
+            <input id ="ucompany" name="ucompany" placeholder="years at this company  "type="number"/> <br><br>
+            <label for="ucrole"><b>ENTER THE YEARS AT CURRENT ROLE </b> </label><br>
+            <input id ="ucrole" name="ucrole" placeholder="years at the current role "type="number"/> <br><br>
+            <label for="ulpromotion"><b>ENTER THE YEARS SINCE LAST PROMOTION </b> </label><br>
+            <input id ="ulpromotion" name="ulpromotion" placeholder="years since last promotion "type="text"/> <br><br>
+            <label for="umincome"><b>ENTER THE MONTHLY INCOME </b> </label><br>
+            <input id ="umincome" name="umincome" placeholder="monthly income(dollar) "type="text"/> <br><br>
+            <label for="uhpercentage"><b>ENTER THE SALARY HIKE PERCENTAGE </b> </label><br>
+            <input id ="uhpercentage" name="uhpercentage" placeholder="salary hike percentage "type="text"/> <br><br>
+            <label for="uinvolvement"><b> JOB INVOLVEMENT  </b> </label><br>
+            <select name="uinvolvement">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                </select><br><br>
+            <label for="usatisfaction"><b> JOB SATISFACTION   </b> </label><br>
+            <select name="usatisfaction">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                </select><br><br>
+            <label for="ursatisfaction"><b> RELATIONSHIP SATISFACTION  </b> </label><br>
+            <select name="ursatisfaction">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                
+            </select><br><br>
+            <label for="uprating"><b> PERFORMANCE RATING </b> </label><br>
+            <select name="uprating">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                
+                         
+            </select><br><br>
+            <label for="uslevel"><b> STOCK OPTION LEVEL  </b> </label><br>
+            <select name="uslevel">
+                <option value=1>0</option>
+                <option value=2>1</option>
+                <option value=3>2</option>
+                <option value=4>3</option>
+                
+                         
+            </select><br><br>
+            <label for="uwbalance"><b> WORK LIFE BALANCE </b> </label><br>
+            <select name="uwbalance">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                
+                         
+            </select><br><br>
+             
+
+            <input type="submit" value="SUBMIT">
+
+        </form>
+        </center>
+        <script>
+            var x, i, j, l, ll, selElmnt, a, b, c;
+        
+        x = document.getElementsByClassName("custom-select");
+        l = x.length;
+        for (i = 0; i < l; i++) {
+          selElmnt = x[i].getElementsByTagName("select")[0];
+          ll = selElmnt.length;
+         
+          a = document.createElement("DIV");
+          a.setAttribute("class", "select-selected");
+          a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+          x[i].appendChild(a);
+        
+          b = document.createElement("DIV");
+          b.setAttribute("class", "select-items select-hide");
+          for (j = 1; j < ll; j++) {
+            
+            c = document.createElement("DIV");
+            c.innerHTML = selElmnt.options[j].innerHTML;
+            c.addEventListener("click", function(e) {
+               
+                var y, i, k, s, h, sl, yl;
+                s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+                sl = s.length;
+                h = this.parentNode.previousSibling;
+                for (i = 0; i < sl; i++) {
+                  if (s.options[i].innerHTML == this.innerHTML) {
+                    s.selectedIndex = i;
+                    h.innerHTML = this.innerHTML;
+                    y = this.parentNode.getElementsByClassName("same-as-selected");
+                    yl = y.length;
+                    for (k = 0; k < yl; k++) {
+                      y[k].removeAttribute("class");
+                    }
+                    this.setAttribute("class", "same-as-selected");
+                    break;
+                  }
+                }
+                h.click();
+            });
+            b.appendChild(c);
+          }
+          x[i].appendChild(b);
+          a.addEventListener("click", function(e) {
+              
+              e.stopPropagation();
+              closeAllSelect(this);
+              this.nextSibling.classList.toggle("select-hide");
+              this.classList.toggle("select-arrow-active");
+            });
+        }
+        function closeAllSelect(elmnt) {
+          
+          var x, y, i, xl, yl, arrNo = [];
+          x = document.getElementsByClassName("select-items");
+          y = document.getElementsByClassName("select-selected");
+          xl = x.length;
+          yl = y.length;
+          for (i = 0; i < yl; i++) {
+            if (elmnt == y[i]) {
+              arrNo.push(i)
+            } else {
+              y[i].classList.remove("select-arrow-active");
+            }
+          }
+          for (i = 0; i < xl; i++) {
+            if (arrNo.indexOf(i)) {
+              x[i].classList.add("select-hide");
+            }
+          }
+        }
+        
+        document.addEventListener("click", closeAllSelect);
+        </script>
+    </body>
+    </html>
