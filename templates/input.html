@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <title>Attrition Prediction</title>
+    <style>
+        select,input[type=number] {
+          width: 25%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid rgb(249, 249, 253);color: rgb(19, 18, 18);
+          background-color: rgb(246, 249, 252);
+          border-color:black;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+        input[type=submit] {
+          width: 25%;
+          background-color:#010f24;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+          background-color: #0629ee;
+        }
+        body{
+          background: #283c86; /* fallback for old browsers */
+          background: -webkit-linear-gradient(to right, #283c86, #45a247); /* Chrome 10-25, Safari 5.1-6 */
+          background: linear-gradient(to right, #283c86, #45a247); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1>ATTRITION PREDICTION</h2>
+      <br>
+      <h3>ENTER THE FOLLOWING DETAILS</h3><br>
+      <form action="/input", method="POST">
+        <label for="age"><b>ENTER THE AGE  </b> </label><br>
+        <input name="age" placeholder="Enter Age" type="number"> <br><br>
+        <label for="distance"><b>ENTER THE DISTANCE FROM HOME  </b> </label><br>
+        <input id ="distance" name="distance" placeholder="Enter Distance" type="number"> <br><br>
+        <label for="es"><b>ENTER THE ENVIRONMENTAL SATISFACTION RATING  </b> </label><br>
+        <input id ="es" name="es" placeholder="Enter Environmental Satisfaction Rating(1-5)" type="number"> <br><br>
+        <label for="ji"><b>ENTER THE JOB INVOLVEMENT RATING </b> </label><br>
+        <input id ="ji" name="ji" placeholder="Enter Job Involvement Rating(1-5)" type="number"> <br><br>
+        <label for="joblevel"><b>ENTER THE JOB LEVEL   </b> </label><br>
+        <input id="joblevel" name="joblevel" placeholder="Enter Job Level (1-5)" type="number"> <br><br>
+        <label for="js"><b>ENTER THE JOB SATISFACTION   </b> </label><br>
+        <input id ="js" name="js" placeholder="Enter Job Satisfaction (1-5)" type="number"> <br><br>
+        <label for="income"><b>ENTER MONTHLY INCOME  </b> </label><br>
+        <input id ="income" name="income" placeholder="Enter Monthly Income" type="number"> <br><br>
+        <label for="stock"><b>ENTER THE STOCK OPTION LEVEL  </b> </label><br>
+        <input id ="stock" name="stock" placeholder="Enter Stock Option Level(1-5)" type="number"> <br><br>
+        <label for="twy"><b>ENTER THE TOTAL WORKING YEARS  </b> </label><br>
+        <input id ="twy" name="twy" placeholder="Enter Total Working Years" type="number"> <br><br>
+        <label for="yac"><b>ENTER THE YEAR AT COMPANY  </b> </label><br>
+        <input id ="yac" name="yac" placeholder="Enter the year at company" type="number"> <br><br>
+        <label for="ycr"><b>ENTER THE YEAR AT CURRENT ROLE  </b> </label><br>
+        <input id ="ycr" name="ycr" placeholder="Enter the year with current manager" type="number"> <br><br>
+        <label for="ycm"><b>ENTER THE YEAR AT CURRENT ROLE  </b> </label><br>
+        <input id ="ycm" name="ycm" placeholder="Enter the year with current manager" type="number"> <br><br>
+        <label for="mstatus"><b>ENTER THE MARRIAGE STATUS</b> </label><br>
+              
+            <select name="mstatus">
+                <option value=2>MARRIED</option>
+                <option value=1>UNMARRIED</option>
+                <option value=3>DIVORCE</option>
+                
+                
+            </select><br><br>
+        <label for="ot"><b> ENTER THE OVERTIME STATUS  </b> </label><br>
+            <select name="ot">
+                <option value=1>YES</option>
+                <option value=0>NO</option>
+                        
+                                 
+            </select><br><br>
+            <input type="submit" value="SUBMIT">
+      </form>
+    </center>
+  </body>
+</html>
